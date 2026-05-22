@@ -17,6 +17,8 @@ BUT, the landscape seems like it's in constant flux, so _caveat emptor_...
 
 ## Getting Started
 
+_(Skip to [Quick Setup](#quick-setup) as this explains what that's doing)_
+
 Create aliases (junctions? symlink?) to your actual agent environment files (e.g. `~/.claude` and `~/.copilot`) to make managing them from one place (i.e. a Visual Studio Code workspace) easier.
 
 ```powershell
@@ -60,7 +62,7 @@ Workspace settings should already exclude the _actual_ folders in favor of the a
 
 ### Quick Setup
 
-#### **Using this repo in Visual Studio Code**
+#### **Bootstrapping this repo in Visual Studio Code**
 
 ```powershell
 .\scripts\alias-setup.ps1
@@ -68,6 +70,8 @@ Workspace settings should already exclude the _actual_ folders in favor of the a
 # TIL view documentation for ^
 Get-Help .\scripts\alias-setup.ps1 -Full
 ```
+
+This will set up local aliases to all your installed agents' files for working with them from within VSCode.  These aliases will also be used by other scripts to keep them relative and not rely on actual agent infrastructure changes.
 
 #### **Scaffold Your Agents**
 
@@ -83,7 +87,7 @@ This scaffolds your local environment with default skills and recommended config
 .\scripts\init-project.ps1
 ```
 
-This scaffolds skills and folders for a typical development project (frontend+backend monorepo).
+This scaffolds skills and folders for a typical development project (frontend+backend monorepo) and assumes you've already set up personal skills.
 
 ## Project Structure
 
@@ -96,6 +100,7 @@ This scaffolds skills and folders for a typical development project (frontend+ba
 |   ├── app-icon/    # Because apps need icons
 |   ├── coding-sop/  # those Karpathy guidelines 🙄
 |   ├── prompt-snapshot/  # keeps convo history in repo
+|   ...
 ├── scripts/         # Helpers for setting things up
 |
 └── README.md        # this, duh

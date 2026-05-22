@@ -27,7 +27,7 @@ Or use the helper script [`scripts/alias-setup.ps1`](scripts/alias-setup.ps1).
 
 Then register them in the VSCode workspace:
 
-```json
+```jsonc
 {
 	"folders": [
 		/* normal files */
@@ -47,7 +47,7 @@ Then register them in the VSCode workspace:
 
 Workspace settings should already exclude the _actual_ folders in favor of the aliases, just so they're named more obviously:
 
-```json
+```jsonc
 		// ...folders^
 	],
 	"settings": {

@@ -1,0 +1,1 @@
+# TBA -- script to copy agent files from this repo to user profile appropriately for each type of agent. This is a one-time setup script that can be run after cloning and aliasing this repo to initialize the agent files in the user's environment.

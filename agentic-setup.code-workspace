@@ -1,0 +1,30 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "Personal-Claude",
+			"name": "Claude (symlink)"
+		},
+		{
+			"path": "Personal-Copilot",
+			"name": "Copilot (symlink)"
+		},
+		/* I'm assuming these since I'm not using them */
+		{
+			"path": "Personal-ChatGPT",
+			"name": "ChatGPT (symlink)"
+		},
+		{
+			"path": "Personal-Perplexity",
+			"name": "Perplexity (symlink)"
+		}
+	],
+	"settings": {
+		/* don't show the actual symlinked folders in the explorer, in favor of the registered aliases above */
+		"files.exclude": {
+			"**/Personal-*": true
+		}
+	}
+}

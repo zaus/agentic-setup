@@ -79,7 +79,8 @@ This will set up local aliases to all your installed agents' files for working w
 .\scripts\init-personal-agents.ps1
 ```
 
-This scaffolds your local environment with default skills and recommended configurations.  i.e. "global" or "personal" skills.
+This scaffolds your local environment with recommended shared configurations and some additional skills (i.e. bootstrapping your "global" or "personal" skills).  It will set up a single "home" folder and copy files from this repo to reprelent an idealized setup, add version control (git) so you can safely modify it over time, and then symlink or reference these canonical versions as appropriate in the actual agent environments (using the workspace aliases created by the previous script).
+
 
 #### **Scaffold Your Project**
 
@@ -87,7 +88,7 @@ This scaffolds your local environment with default skills and recommended config
 .\scripts\init-project.ps1
 ```
 
-This scaffolds skills and folders for a typical development project (frontend+backend monorepo) and assumes you've already set up personal skills.
+This scaffolds skills and folders for a typical development project (frontend+backend monorepo) and assumes you've already set up personal skills.  It will ask for the project directory to create or copy assets.
 
 ## Project Structure
 
@@ -100,6 +101,7 @@ This scaffolds skills and folders for a typical development project (frontend+ba
 |   ├── app-icon/    # Because apps need icons
 |   ├── coding-sop/  # those Karpathy guidelines 🙄
 |   ├── prompt-snapshot/  # keeps convo history in repo
+|   ├── timestamp/   # for consistent generation
 |   ...
 ├── scripts/         # Helpers for setting things up
 |
@@ -109,7 +111,7 @@ This scaffolds skills and folders for a typical development project (frontend+ba
 ## Documentation
 
 See [docs/](docs/) for detailed guides on:
-- Configuring your agent environments
+- Configuring your agent environments with an idealized setup (files and folders shared across agents, with source control, symlinked to actual locations)
 - Creating custom skills
 - Best practices
 

@@ -1,6 +1,37 @@
 ---
 name: prompt-snapshot
 description: Saves a summarized version of the agent/prompt conversation to a history folder
+argument-hint: Optional: description, title, applyTo, workspaceRoot
 ---
 
-Save a summarized version of the prompt conversation (both input and output) in a markdown file with a YAML front matter header that includes a description of the purpose and effect of the conversation, timestamp (YYYY-MM-DDTHH:MM:SS in local time), model used, and an `applyTo` property that specifies a glob pattern for relevant files (input and output). The content of the markdown file should be the exact prompt used and a concise summary of the conversation, highlighting key points and decisions made during the discussion. This file should be saved in the root workspace/folder of the affected file(s) under `.prompt-snapshots` subdirectory beginning with the timestamp (`YYYY-MM-DD HHMM_SS`) in the filename for sorting by execution time followed by a very short title for the conversation.
+# Prompt Snapshot Skill
+
+Save a summarized version of the prompt conversation (both input and output) in a markdown file with YAML frontmatter and store it within the same workspace for later reference. This allows owners and agents to keep a persistent, organized record of their interactions and decisions over time.
+
+
+## Filename and location
+
+- Location: `.prompt-snapshots/` at the root of the workspace/folder of the affected files.
+- Filename: `<timestamp> <short title>.md` where
+  - `timestamp` is the current timestamp formatted for chronological file sorting and scanability.
+  - `short title` is a concise summary of the conversation for scanability in chronological lists
+
+
+## Required frontmatter
+
+- `description`: purpose and effect of the conversation
+- `timestamp`: local timestamp for logging
+- `model`: model used to answer the user prompt
+- `applyTo`: glob pattern for relevant input/output files
+
+
+## Content requirements
+
+- Include the exact user prompt(s).
+- Include a concise summary of key points, decisions, and changes made.
+- Keep the title short and specific for scanability in chronological lists.
+
+
+## Timestamp skill integration (required)
+
+Use the `timestamp` skill as the source of truth for all snapshot times.

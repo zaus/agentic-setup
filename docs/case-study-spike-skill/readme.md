@@ -2,4 +2,4 @@
 
 TBD writeup for my experience with using Copilot vs Claude to create the [`spike-prompt`](../../skills/spike-prompt/) skill.
 
-**TL;DR** Copilot CLI did a decent job creating the skill, but Claude Desktop went above-and-beyond with an interactive evaluation framework _soliciting feedback_ comparing prompt output with- and without skill use.  This was primarily due to the lack of a 'create-skill' skill in the Copilot CLI, which does exist in Copilot's IDE/GUI chat apps, and was responsible for Claude's creation/refinement/evaluation workflow.
+**TL;DR** Copilot CLI did a decent job creating the skill, but Claude Desktop went above-and-beyond with an interactive evaluation framework _soliciting feedback_ comparing prompt output with- and without skill use.  This was primarily due to the lack of a 'create-skill' skill in the Copilot CLI, which does exist in Copilot's IDE/GUI chat apps, and was responsible for Claude's creation/refinement/evaluation workflow that follows [best practices for evaluating skills](https://agentskills.io/skill-creation/evaluating-skills).

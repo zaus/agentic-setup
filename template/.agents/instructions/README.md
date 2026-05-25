@@ -1,0 +1,7 @@
+As described in this [Visual Studio guide](https://learn.microsoft.com/en-us/visualstudio/ide/copilot-chat-context?view=visualstudio#use-instructionsmd-files) or this [Visual Studio Code guide](https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_use-instructionsmd-files) or this [Claude guide](https://code.claude.com/docs/en/memory#organize-rules-with-claude/rules/), automatically map specific behavioral rules to targeted files or folders in your workspace by adding different `<topic>.instructions.md` files with frontmatter `applyTo` (Copilot) and `paths` (Claude) listing globs of applicable files or folders.  Omitting frontmatter won't automatically apply the rules.
+
+Consider organizational subfolders corresponding to teams, languages, and/or modules like "frontend", "backend", "testing".
+
+Consider generating your instruction files by leveraging an agentic-framework that comes with an applicable skill (like [Visual Studio Code](https://code.visualstudio.com/docs/copilot/customization/custom-instructions#_generate-an-instructions-file-with-ai)), which will help ensure best practices and optimum configuration.
+
+When adding to these agent-agnostic rules, support all formats (i.e. include both `applyTo` and `paths`) so that bootstrapping can symlink agent-specific locations to these canonical folders.

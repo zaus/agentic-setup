@@ -2,10 +2,10 @@
 name: AGENTS.md
 description: Core behavior template for agentic behaviors; this file will be updated programmatically to replace preference blocks.
 preferences_blocks:
-	- PERSONA
-	- WHITESPACE
-	- SCRIPT
-	- SCRIPT_NON
+  PERSONA: who you should behave as, such as profession or proclivity or expertise
+  WHITESPACE: your default whitespace preference (TABS or SPACES)
+  SCRIPT: what language/tool to use first when writing helper scripts; may provide multiple
+  SCRIPT_NON: any language/tool exclusions to never attempt when writing helper scripts (such as if the language isn't installed on a user's machine), phrased as "Never use <language> because <reason>".  Remove if none provided.
 ---
 
 ## Persona

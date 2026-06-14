@@ -1,7 +1,7 @@
 ---
 name: timestamp
 description: Generate a timestamp in a consistent, context-appropriate format for use in filenames, logs, displays, databases, and other purposes.
-argument-hint: Optional: value, context/style, format, zone/timezone, dateonly, timeonly, withseconds
+argument-hint: "Optional: value, context/style, format, zone/timezone, dateonly, timeonly, withseconds"
 ---
 
 When asked to generate a timestamp, obtain a base date/time (see `value` parameter), then format and return it according to the parameters below.
